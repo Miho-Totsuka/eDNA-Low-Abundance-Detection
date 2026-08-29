@@ -13,9 +13,7 @@ This repository will contain the code, documentation, and results for a study co
 Does a detection rule that performs well on one eDNA metabarcoding dataset generalize to an independent dataset?
 More specifically:
 
-```text
 Can low-abundance fish eDNA signals be reliably distinguished from background noise using detection rules that remain stable across independent datasets?
-```
 
 The study will compare manually defined rule-based methods with a machine-learned decision rule and evaluate their generalization using external validation.
 
