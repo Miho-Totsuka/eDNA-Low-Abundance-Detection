@@ -141,6 +141,22 @@ A combined rule may use:
 
 The exact combined rule will be defined using Dataset A and frozen before external validation.
 
+###6. Decision Tree-Based Rule
+
+A decision tree will be trained using Dataset A to identify combinations of features that distinguish reliable detections from false or background detections.
+Candidate features may include:
+
+- read count;
+- relative abundance;
+- replicate consistency;
+- negative-control signal;
+- other experimentally relevant variables available consistently across datasets.
+
+The decision tree will be evaluated using an appropriate validation procedure within Dataset A. After model selection, the final tree and its parameters will be frozen before external validation.
+The frozen decision tree will then be applied unchanged to Dataset B to evaluate whether a machine-learned decision rule generalizes across independent datasets.
+The decision tree will also be compared with manually defined rule-based methods in terms of Precision, Recall, F1 Score, false positives, false negatives, and cross-dataset stability.
+ 
+
 ## Evaluation
 
 Where ground-truth species composition is available, each species-by-sample prediction will be classified as:
