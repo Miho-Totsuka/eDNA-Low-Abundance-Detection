@@ -13,7 +13,9 @@ This repository will contain the code, documentation, and results for a study co
 Does a detection rule that performs well on one eDNA metabarcoding dataset generalize to an independent dataset?
 More specifically:
 
+```text
 Can low-abundance fish eDNA signals be reliably distinguished from background noise using detection rules that remain stable across independent datasets?
+```
 
 The study will compare manually defined rule-based methods with a machine-learned decision rule and evaluate their generalization using external validation.
 
@@ -218,11 +220,10 @@ False-positive and false-negative counts will also be examined directly because 
 
 ## Main Hypothesis
 
-Fixed read-count thresholds may perform well on the dataset used to select them but may lose performance when sequencing depth or background noise differs across datasets.
-
-Rules that incorporate replicate consistency or negative controls may show more stable performance during external validation.
-
-This is a hypothesis to be tested, not an assumed conclusion.
+Detection rules may differ in how well they generalize across independent eDNA metabarcoding datasets.
+A rule that performs well on Dataset A may lose performance on Dataset B when characteristics such as sequencing depth, read-count distribution, or background signal differ.
+Rules that incorporate multiple sources of evidence, such as replicate consistency or negative-control information, may be more robust, but this will be evaluated empirically rather than assumed in advance.
+The decision-tree model will provide an additional comparison to determine whether a machine-learned rule can generalize better than manually defined rules.
 
 ## Planned Repository Structure
 
