@@ -29,6 +29,21 @@ Removing all low-read detections may cause real species to be missed. Keeping al
 
 This project therefore examines which detection rules can distinguish real low-abundance signals from noise and whether those rules generalize to independent datasets.
 
+## Dataset Similarity and Distribution Analysis
+
+Before evaluating detection rules in detail, Dataset A and Dataset B will first be compared using basic characteristics shared across the datasets.
+The analysis will focus initially on factors such as:
+
+- read-count distributions;
+- sequencing depth;
+- replicate structure;
+- negative-control background;
+- other experimentally relevant variables that are consistently available across datasets.
+
+This preliminary analysis will help characterize how similar or different the two datasets are.
+The purpose is not to exclude Dataset B based on these differences, but to investigate whether differences between datasets can help explain changes in detection performance during external validation.
+ 
+
 ## Study Design
 
 The study follows a development-and-external-validation design.
