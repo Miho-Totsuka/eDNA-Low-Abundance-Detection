@@ -10,7 +10,12 @@ This repository will contain the code, documentation, and results for a study co
 
 ## Research Question
 
-How can we determine whether a low-abundance fish detection in eDNA metabarcoding data is reliable?
+Does a detection rule that performs well on one eDNA metabarcoding dataset generalize to an independent dataset?
+More specifically:
+
+Can low-abundance fish eDNA signals be reliably distinguished from background noise using detection rules that remain stable across independent datasets?
+
+The study will compare manually defined rule-based methods with a machine-learned decision rule and evaluate their generalization using external validation.
 
 ## Why This Matters
 
