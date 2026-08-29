@@ -141,7 +141,7 @@ A combined rule may use:
 
 The exact combined rule will be defined using Dataset A and frozen before external validation.
 
-###6. Decision Tree-Based Rule
+### 6. Decision Tree-Based Rule
 
 A decision tree will be trained using Dataset A to identify combinations of features that distinguish reliable detections from false or background detections.
 Candidate features may include:
