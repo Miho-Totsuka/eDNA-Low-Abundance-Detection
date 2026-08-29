@@ -221,8 +221,11 @@ False-positive and false-negative counts will also be examined directly because 
 ## Main Hypothesis
 
 Detection rules may differ in how well they generalize across independent eDNA metabarcoding datasets.
+
 A rule that performs well on Dataset A may lose performance on Dataset B when characteristics such as sequencing depth, read-count distribution, or background signal differ.
+
 Rules that incorporate multiple sources of evidence, such as replicate consistency or negative-control information, may be more robust, but this will be evaluated empirically rather than assumed in advance.
+
 The decision-tree model will provide an additional comparison to determine whether a machine-learned rule can generalize better than manually defined rules.
 
 ## Planned Repository Structure
