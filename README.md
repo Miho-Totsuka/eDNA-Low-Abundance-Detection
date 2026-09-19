@@ -40,11 +40,13 @@ Before evaluating detection rules in detail, Dataset A and Dataset B will first 
 The analysis will focus initially on factors such as:
 
 - read-count distributions;
+- relative-abundance distributions;
 - sequencing depth;
+- marker region and primer;
 - replicate structure;
 - negative-control background;
-- other experimentally relevant variables that are consistently available across datasets.
-
+- other experimentally relevant experimental conditions that are consistently available across datasets.
+  
 This preliminary analysis will help characterize how similar or different the two datasets are.
 The purpose is not to exclude Dataset B based on these differences, but to investigate whether differences between datasets can help explain changes in detection performance during external validation.
  
@@ -159,7 +161,7 @@ A combined rule may use:
 - replicate consistency;
 - negative-control signal.
 
-The exact combined rule will be defined using Dataset A and frozen before external validation.
+The combined rule will be defined and evaluated using Dataset A according to the predefined evaluation criteria, and then frozen before external validation.
 
 ### 6. Decision Tree-Based Rule
 
@@ -179,7 +181,9 @@ The decision tree will also be compared with manually defined rule-based methods
 
 ## Evaluation
 
-Where ground-truth species composition is available, each species-by-sample prediction will be classified as:
+For evaluation, the study will use a reference standard, such as the expected species composition of a mock community, as the basis for determining whether a species is considered present or absent.
+
+Where a reference standard is available, such as the known species composition of a mock community, each species-by-sample prediction will be classified as:
 
 | Classification | Meaning |
 |---|---|
@@ -220,7 +224,7 @@ False-positive and false-negative counts will also be examined directly because 
 
 Detection rules may differ in how well they generalize across independent eDNA metabarcoding datasets.
 
-A rule that performs well on Dataset A may lose performance on Dataset B when characteristics such as sequencing depth, read-count distribution, or background signal differ.
+A rule that performs well on Dataset A may lose performance on Dataset B when characteristics such as sequencing depth, read-count distribution, relative abundance, background signal, or experimental conditions differ.
 
 Rules that incorporate multiple sources of evidence, such as replicate consistency or negative-control information, may be more robust, but this will be evaluated empirically rather than assumed in advance.
 
@@ -305,8 +309,9 @@ Potential limitations include:
 - differences in mock-community composition;
 - incomplete or differently defined ground truth;
 - variation in preprocessing pipelines between studies.
+- the fact that eDNA detection provides evidence of species presence rather than definitive proof of presence;
 
-These differences will be documented and considered when interpreting cross-dataset performance.
+These differences and limitations will be documented and considered when interpreting cross-dataset performance.
 
 ## Expected Outputs
 
